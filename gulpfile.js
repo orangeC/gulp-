@@ -1,7 +1,20 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var prefix = require("gulp-autoprefixer");//引入autoprefixer
-var minify = require("gulp-minify-css")
+var minify = require("gulp-minify-css");
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+
+
+gulp.task('imagemin', function(){
+  return gulp.src('src/images/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest('dist/images'));
+});//压缩图片处理工具
 
 
 gulp.task("sass",function(){
