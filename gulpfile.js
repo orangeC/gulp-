@@ -6,7 +6,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
 
-gulp.task('imagemin', function(){
+gulp.task("imagemin", function(){
   return gulp.src('src/images/*')
     .pipe(imagemin({
       progressive: true,
@@ -14,7 +14,7 @@ gulp.task('imagemin', function(){
       use: [pngquant()]
     }))
     .pipe(gulp.dest('dist/images'));
-});//压缩图片处理工具
+});
 
 
 gulp.task("sass",function(){
