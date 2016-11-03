@@ -4,6 +4,13 @@ body {
 a {
   text-decoration: none; }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+
 header {
   background-color: #00BCD4;
   height: 70px; }

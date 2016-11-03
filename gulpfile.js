@@ -1,10 +1,12 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
+var prefix = require("gulp-autoprefixer");//引入autoprefixer
 
 
 gulp.task("sass",function(){
 	gulp.src("src/main.scss")
 	.pipe(sass())
+	.pipe(prefix())//在sass转化css之后进行厂商前缀的添加
 	.pipe(gulp.dest("dist/"));
 })
 
