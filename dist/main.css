@@ -10,16 +10,14 @@ header {
 
 .hero {
   padding: 80px; }
-
-.hero .btn {
-  width: 100px;
-  height: 40px;
-  margin: 20px auto;
-  background-color: #FF4081; }
-
-.hero .btn:hover {
-  background-color: lightseagreen;
-  cursor: pointer; }
+  .hero .btn {
+    width: 100px;
+    height: 40px;
+    margin: 20px auto;
+    background-color: #FF4081; }
+    .hero .btn:hover {
+      background-color: #ff73a3;
+      cursor: pointer; }
 
 .first {
   height: 200px;

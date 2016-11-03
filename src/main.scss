@@ -14,17 +14,19 @@ header{
 }
 .hero{
 	padding: 80px;
+	.btn{
+		width: 100px;
+		height: 40px;
+		margin: 20px auto;
+		background-color: $accent-color;
+		&:hover{
+			background-color: lighten($accent-color,10%);//使用函数，调用Lighten函数，让该颜色比$accent-color浅10%
+			cursor: pointer;
+		}
+	}
+	
 }
-.hero .btn{
-	width: 100px;
-	height: 40px;
-	margin: 20px auto;
-	background-color: $accent-color;
-}
-.hero .btn:hover{
-	background-color: lightseagreen;
-	cursor: pointer;
-}
+
 
 .first{
 	height: 200px;
